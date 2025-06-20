@@ -216,6 +216,7 @@ class JournalEntryViewController: UIViewController, UITextViewDelegate, UIImageP
         }
         catch{
             //error
+            print(error)
         }
     }
         

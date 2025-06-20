@@ -23,6 +23,7 @@ class BackgroundViewController: UIViewController {
         setTimeDate()
         setTheme()
         update()
+        
         _ = Timer.scheduledTimer(timeInterval: 0.01, target: self,
         selector: #selector(update), userInfo: nil, repeats: true)
 

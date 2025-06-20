@@ -45,11 +45,13 @@ struct PieChartSetup: View {
                         .foregroundStyle(by: .value("Mood", mood.mood))
                         .shadow(color: Color(GlobalVariables.globalAccentColour!), radius: 2)
                         .annotation(position: .overlay) {
-                            Text(mood.count == 0 ? "" : "\(mood.count)")
-                                .font(.caption)
-                                .fontWeight(.heavy)
-                                .padding(5)
-                                .foregroundStyle(Color.black)
+                            if mood.count > 0 {
+                                Text(mood.count.formatted())
+                                    .font(.caption)
+                                    .fontWeight(.heavy)
+                                    .padding(5)
+                                    .foregroundStyle(Color.black)
+                            }
                         }
                 }
             }
